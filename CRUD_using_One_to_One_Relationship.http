@@ -1,0 +1,6 @@
+@CRUD_using_One_to_One_Relationship_HostAddress = http://localhost:5104
+
+GET {{CRUD_using_One_to_One_Relationship_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

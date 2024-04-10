@@ -57,14 +57,14 @@ namespace CRUD_using_One_to_One_Relationship.Controllers
         [HttpPut]
         [Route("Update")]
 
-        public string Update(Student updatestudent,int id)
+        public string Update([FromForm]StudentVM updatestudent,int id)
         {
             Student foundstudent=studentservice.GetStudentById(id);
             foundstudent.Name = updatestudent.Name;
             foundstudent.Fee= updatestudent.Fee;
-            foundstudent.mark.M1=updatestudent.mark.M1;
-            foundstudent.mark.M2=updatestudent.mark.M2;
-            foundstudent.mark.M3=updatestudent.mark.M3;
+            foundstudent.mark.M1 = updatestudent.M1;
+            foundstudent.mark.M2=updatestudent.M2;
+            foundstudent.mark.M3=updatestudent.M3;
             string message=studentservice.Update(foundstudent);
             return message;
         }

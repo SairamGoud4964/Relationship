@@ -34,7 +34,7 @@ namespace CRUD_using_One_to_One_Relationship.Services
 
         public List<Student> GetAllStudents()
         {
-            List<Student> students = ctx.Students.ToList();
+            List<Student> students = ctx.Students.Include(val=>val.mark).ToList();
             return students;    
         }
 
